@@ -10,8 +10,8 @@ To Run the project:
 2. After activating virtual environment change directory to "hsbc_project".
    Inside "hsbc_project" use "python manage.py runserver" to run the server.
 
-3. After server in running, It shows "Starting development server at http://127.0.0.1:8000/".
+3. After server is running, It shows "Starting development server at http://127.0.0.1:8000/".
    Open http://127.0.0.1:8000/ on your browser.
 
 4. When you open this url on browser you will be automatically redirected to "http://127.0.0.1:8000/search/".
-   You can now you the application.
+   You can now use the application.
