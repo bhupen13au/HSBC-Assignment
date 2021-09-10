@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Search matching City</title>
+      <link rel="stylesheet" href="{% static 'login.css' %}">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div>
+          <form action="" method="post">
+            {% csrf_token %}
+            <div>
+              {% for message in messages %}
+              <h5 style="color:red;"> {{ message }} </h5>
+              {% endfor %}
+            </div>
+            <h3 class="text-warning text-center pt-5">Search matching City</h3>
+
+            <label>
+              <input
+                     type="text"
+                     class="input"
+                     name="letter"
+                     placeholder="Type first letter of the city to be searched"
+                     maxlength="1"/>
+              <div class="line-box">
+                <div class="line"></div>
+              </div>
+            </label>
+
+            <button type="submit">Search</button>
+
+            <br><br>
+            <div>
+              {% if cities %}
+                <h4>There are/is {{ count }} matched cities which are/is:</h4>
+                {% for city in cities %}
+                <li style="list-style-type: none;"> {{ city }} </li>
+                {% endfor %}
+              {% else %}
+              {% endif %}
+            </div>
+          </form>
+        </div>
+    </body>
+</html>
